@@ -1,9 +1,9 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:seagate_fuel/fragmanets/FuelFragment.dart';
+import 'package:seagate_fuel/fragments/DashboardFragment.dart';
 
-import '../fragmanets/BillFragment.dart';
+import '../fragments/HistoryFragment.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                           color: Colors.white),
                       margin: EdgeInsets.all(width * 0.025),
                       padding: const EdgeInsets.all(9),
-                      height: 70,
+                      height: 60,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
                               },
                               icon: const Icon(FontAwesomeIcons.bars)),
                           const Text(
-                            "Update Fuel",
+                            "Dashboard",
                             style: TextStyle(fontSize: 18),
                           ),
                           IconButton(
@@ -99,11 +99,10 @@ class _HomePageState extends State<HomePage> {
                                 });
                               },
                               icon: const Icon(FontAwesomeIcons.gasPump)),
-                          FloatingActionButton.extended(
+                          FloatingActionButton(
                             isExtended: true,
-                            icon: Icon(Icons.add),
+                            child: Icon(Icons.add),
                             onPressed: () {},
-                            label: const Text("Add Place"),
                           ),
                           IconButton(
                               onPressed: () {
