@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:fl_chart/fl_chart.dart';
-import 'package:seagate_fuel/widgets/dashboard_card.dart';
+import '../widgets/dashboard_card.dart';
 
 import '../widgets/LineChartWidget.dart';
 
@@ -17,7 +16,7 @@ class _FuelFragmentState extends State<FuelFragment> {
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     return Container(
-      margin: EdgeInsets.only(left: 12, right: 12),
+      margin: const EdgeInsets.only(left: 12, right: 12),
       alignment: Alignment.center,
       child: ListView(children: [
         Row(
